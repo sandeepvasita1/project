@@ -1,4 +1,5 @@
 
+import Calculate from "./components/Calculate"
 import Regeg from "./components/Regeg"
 import Service from "./components/Service"
 import Services from "./components/Services"
@@ -12,7 +13,8 @@ export default function App() {
        {/* <Services></Services> */}
        {/* <Working></Working> */}
        {/* <Users></Users> */}
-       <Regeg></Regeg>
+       {/* <Regeg></Regeg> */}
+       <Calculate></Calculate>
            
         </>
     )
