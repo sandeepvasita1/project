@@ -1,31 +1,16 @@
 import React from 'react'
-import Service from './Service'
+import {services} from '../data'
+// import Service from './Service'
+import { Link } from 'react-router-dom'
 export default function Services() {
- let s =   [
-  {
-    "name": "Web Development",
-    "des": "We create responsive and user-friendly websites for businesses and organisations."
-  },
-  {
-    "name": "Mobile App Development",
-    "des": "We develop mobile applications that provide smooth performance and a simple user experience."
-  },
-  {
-    "name": "UI/UX Design",
-    "des": "We design clean and engaging user interfaces focused on usability and accessibility."
-  },
-  {
-    "name": "Cloud Services",
-    "des": "We provide cloud-based solutions to help businesses manage applications, data, and infrastructure."
-  },
-  {
-    "name": "Data Analytics",
-    "des": "We transform business data into useful insights through reporting, dashboards, and data analysis."
-  }
-]
-let ui = s.map((ser)=>{
-    return <Service name={ser.name} des={ser.des}></Service>
-})
+ 
+    let ui=services.map((ser)=>{
+      return <div className='w-1/4'>
+        <img src={ser.image}/>
+        <div>{ser.rating}</div>
+        <Link to={"/Service/"+ser.id}>View Details</Link>
+      </div>
+    })
   return (
     <div className='text-center mx-auto w-4/5 '>
         <h1 className='text-3xl text-cyan-500 font-bold'>Services</h1>

@@ -1,20 +1,45 @@
 
 import Calculate from "./components/Calculate"
+import Count from "./components/Count"
 import Regeg from "./components/Regeg"
 import Service from "./components/Service"
 import Services from "./components/Services"
+import Tackvalue from "./components/Tackvalue"
 import Users from "./components/Users"
 import Working from "./components/Working"
+import Sum from "./components/Sum"
+import All_Employees from "./components/All_Employees"
+import { Route,Routes } from "react-router-dom"
+import Menubar from "./components/Menuber"
+import Home from "./components/Home"
+import Effacteg from "./components/Effacteg"
+import Student from "./components/Student"
 
 export default function App() {
     return (
         <>
-        
+        <Student></Student>
+        {/* <Effacteg></Effacteg> */}
        {/* <Services></Services> */}
        {/* <Working></Working> */}
        {/* <Users></Users> */}
        {/* <Regeg></Regeg> */}
-       <Calculate></Calculate>
+       {/* <Calculate></Calculate> */}
+       {/* <Count></Count> */}
+       {/* <Tackvalue></Tackvalue> */}
+      {/* <Sum></Sum> */}
+      {/* <Count></Count> */}
+      {/* <All_Employees></All_Employees> */}
+      {/* <h1>this is above routes</h1>
+      <Menubar></Menubar>
+      <Routes>
+        <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/Count" element={<Count></Count>}></Route>
+        <Route path="/Services" element={<Services></Services>}></Route>
+        <Route path="/Service/:id" element={<Service></Service>}></Route>
+        <Route path="/employees" element={<All_Employees></All_Employees>}></Route>
+
+      </Routes> */}
            
         </>
     )

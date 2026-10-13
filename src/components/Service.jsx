@@ -1,13 +1,23 @@
-export default function Service(props){
+import { useParams } from "react-router-dom"
+import { services } from "../data"
+export default function Service(){
+    let params=useParams()
+    let id=params.id
+    let service=services.find((s)=>s.id==id)
    
     
    
     return(
         <>        
-        <div className="flex  flex-col w-1/4 border-gray-400 text-center p-2">
-            <div className="text-lg font-bold">{props.name}</div>
-            <div className="text-sm pt-2">{props.des}</div>
-            
+        <div className="w-1/2 h-1/2 flex gap-50 p-2">
+        <div>
+            <div className="text-sm pt-2">{service.name}</div>
+            <div className="text-sm pt-2">{service.description}</div>
+            <div className="text-sm pt-2">{service.price}</div>
+            </div>
+            <div className="">
+                <img src={service.image}/>
+                </div>
               
         </div>
         </>
