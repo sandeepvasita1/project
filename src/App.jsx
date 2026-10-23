@@ -1,6 +1,5 @@
 
-import Calculate from "./components/Calculate"
-import Count from "./components/Count"
+
 import Regeg from "./components/Regeg"
 import Service from "./components/Service"
 import Services from "./components/Services"
@@ -14,18 +13,20 @@ import Menubar from "./components/Menuber"
 import Home from "./components/Home"
 import Effacteg from "./components/Effacteg"
 import Student from "./components/Student"
+import Taskmain from "./components/Taskmain"
 
 export default function App() {
     return (
         <>
-        <Student></Student>
+        <Taskmain></Taskmain>
+        {/* <Student></Student> */}
         {/* <Effacteg></Effacteg> */}
        {/* <Services></Services> */}
        {/* <Working></Working> */}
        {/* <Users></Users> */}
        {/* <Regeg></Regeg> */}
-       {/* <Calculate></Calculate> */}
-       {/* <Count></Count> */}
+     
+       
        {/* <Tackvalue></Tackvalue> */}
       {/* <Sum></Sum> */}
       {/* <Count></Count> */}
