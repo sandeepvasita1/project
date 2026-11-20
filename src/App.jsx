@@ -14,11 +14,15 @@ import Home from "./components/Home"
 import Effacteg from "./components/Effacteg"
 import Student from "./components/Student"
 import Taskmain from "./components/Taskmain"
+import Contexthome from "./components/contextcomponents/Contexthome"
+import Contextcolor from "./components/contextcomponents/Contextcolor"
 
 export default function App() {
     return (
         <>
-        <Taskmain></Taskmain>
+        {/* <Contexthome></Contexthome> */}
+        <Contextcolor></Contextcolor>
+        {/* <Taskmain></Taskmain> */}
         {/* <Student></Student> */}
         {/* <Effacteg></Effacteg> */}
        {/* <Services></Services> */}
