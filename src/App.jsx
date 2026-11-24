@@ -16,12 +16,30 @@ import Student from "./components/Student"
 import Taskmain from "./components/Taskmain"
 import Contexthome from "./components/contextcomponents/Contexthome"
 import Contextcolor from "./components/contextcomponents/Contextcolor"
-
+import { userContext } from "./contexts/userContext";
+import ContextLogin from "./components/contextcomponents/ContextLogin";
+import Logout from "./components/contextcomponents/Logout";
+import Contextuserhome from "./components/contextcomponents/Contextuserhome";
+import { useState } from "react";
 export default function App() {
+  const [uname,setuname] = useState("")
+  return (
+    <>
+<userContext.Provider value={{uname:uname,setuname}}>
+  {/* {uname==""?<ContextLogin></ContextLogin>:<ContextUserHome></ContextUserHome>} */}
+  <Routes>
+    <Route path="/login" element={<ContextLogin></ContextLogin>}></Route>
+    <Route path="/logout" element={<Logout></Logout>}></Route>
+    <Route path="/home" element={<Contextuserhome></Contextuserhome>}></Route>
+  </Routes>
+
+</userContext.Provider>
+
+{/* export default function App() {
     return (
         <>
         {/* <Contexthome></Contexthome> */}
-        <Contextcolor></Contextcolor>
+        {/* <Contextcolor></Contextcolor> */}
         {/* <Taskmain></Taskmain> */}
         {/* <Student></Student> */}
         {/* <Effacteg></Effacteg> */}
